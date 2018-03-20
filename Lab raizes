@@ -1,0 +1,30 @@
+function y=v(t)
+    y=4.*exp(-t/4).*cos(t)-0.4
+endfunction
+k=0:0.1:5
+j=v(k)
+plot(k,v(k))
+
+function y=fx(t)
+    y=-exp(-t/4).*(sin(t)+cos(t))
+endfunction
+h=0:0.1:5u=fx(h)
+plot(h,fx(h))
+inteiracao=0
+a=2
+b=4
+erro=0
+while(1)
+xold = x
+x=a-((fx(a).*(b-a))/(fx(b)-fx(a)))
+erro=abs((x-xold)/x)
+if  fx(a).*fx(x) then
+   b=xold
+   else 
+   a=xold
+   end
+ if erro< (10^-6) then
+     break
+   end   
+  inteiracao=inteiracao+1
+   end
