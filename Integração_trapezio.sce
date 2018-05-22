@@ -10,7 +10,8 @@ endfunction
 h=(b-a)/n
 x = a:h:b
 y = f(x)
-for i=1:n-1
+for i=1:n
     soma=soma+y(i)+y(i+1)
 end
 result=(h/2)*soma
+
