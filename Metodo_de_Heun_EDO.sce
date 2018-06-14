@@ -32,6 +32,4 @@ endfunction
 //Para chamar a função resultado
 [x,y] =  heun(0,2,0.5,0.25)
 
-//a = -0.5:.0.1:3;
-//b = f(a);
-//plot(a,b)
+
