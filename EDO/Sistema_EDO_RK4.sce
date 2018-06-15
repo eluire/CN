@@ -29,8 +29,8 @@ function [t,x,z]=sisRK4(a,b,h,x0,z0)
         k4x=gx(t(i)+h,x(i)+k3x*h,z(i)+k3z*h)
         k4z=gz(t(i)+h,x(i)+k3x*h,z(i)+k3z*h)
         //calculando a inclinação ponderada
-        kx=((k1x+k2x+k3x+k4x)*(1/6))
-        kz=((k1z+k2z+k3z+k4z)*(1/6))
+        kx=((k1x+2*k2x+2*k3x+k4x)*(1/6))
+        kz=((k1z+2*k2z+2*k3z+k4z)*(1/6))
         //resultados finais da inteiração
         x(i+1)=x(i)+kx*h
         z(i+1)=z(i)+kz*h
