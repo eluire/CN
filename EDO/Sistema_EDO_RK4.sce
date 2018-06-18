@@ -11,7 +11,7 @@ endfunction
 
 //inicialização do Metodo
 function [t,x,z]=sisRK4(a,b,h,x0,z0)
-    t=a:b:h
+    t=a:h:b
     n=length(t)
     x(1)=x0
     z(1)=z0
